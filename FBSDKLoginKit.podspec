@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   s.prefix_header_contents = '#define FBSDKCOCOAPODS'
 
   s.subspec 'Frameworks' do |ss|
-    ss.vendored_frameworks = "build/XCFrameworks/FBSDKLoginKit.xcframework"
+    ss.vendored_frameworks = "XCFrameworks/FBSDKLoginKit.xcframework"
   end
 
   s.subspec 'Login' do |ss|

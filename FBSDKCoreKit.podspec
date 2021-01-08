@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Frameworks' do |ss|
-    ss.vendored_frameworks = "build/XCFrameworks/FBSDKCoreKit.xcframework"
+    ss.vendored_frameworks = "XCFrameworks/FBSDKCoreKit.xcframework"
   end
 
   s.subspec 'Core' do |ss|
