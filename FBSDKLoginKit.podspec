@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '10.0'
 
   s.source       = {
-    git: 'https://github.com/facebook/facebook-ios-sdk.git',
+    git: 'https://github.com/joesus/facebook-ios-sdk.git',
     tag: "v#{s.version}"
   }
 
@@ -37,6 +37,10 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'Login'
   s.swift_version = '5.0'
   s.prefix_header_contents = '#define FBSDKCOCOAPODS'
+
+  s.subspec 'Frameworks' do |ss|
+    ss.vendored_frameworks = "build/XCFrameworks/FBSDKLoginKit.xcframework"
+  end
 
   s.subspec 'Login' do |ss|
     ss.dependency 'FBSDKCoreKit', "~> #{s.version}"

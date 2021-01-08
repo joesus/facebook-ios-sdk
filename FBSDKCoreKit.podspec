@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '10.0'
 
   s.source       = {
-    git: 'https://github.com/facebook/facebook-ios-sdk.git',
+    git: 'https://github.com/joesus/facebook-ios-sdk.git',
     tag: "v#{s.version}"
   }
 
@@ -50,6 +50,10 @@ Pod::Spec.new do |s|
     ss.source_files = 'Sources/FBSDKCoreKit_Basics/**/*.{h,m}'
     ss.private_header_files = 'Sources/FBSDKCoreKit_Basics/**/*+Internal.h'
     ss.library = 'z'
+  end
+
+  s.subspec 'Frameworks' do |ss|
+    ss.vendored_frameworks = "build/XCFrameworks/FBSDKCoreKit.xcframework"
   end
 
   s.subspec 'Core' do |ss|
